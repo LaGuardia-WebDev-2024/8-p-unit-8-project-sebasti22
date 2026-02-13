@@ -1,14 +1,29 @@
-//🟢setup Function - will run once
-setup = function() {
+//🟢setup Function - Run Once to set The Canvas
+void setup(){
     size(600, 400);
-    background(255,255,255,0);
+    background(146 , 129, 201, 0);
     
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
+    fill(181,38,79)
+    textSize(20); 
+     textFont(createFont("Papyrus"));
+    text("Click to see the stars!", 200, 100);
 };
 
 //🟢draw Function - will run on repeat
 draw = function(){
+  fill(405,255,489,100);
+  strokeWeight(3);
+
+  //Moon
+  ellipse(200,60,77,90);
+  ellipse(180,40,10,10); //left eye
+  ellipse(217,40,10,10); //right eye
+
+if(mousePressed){
+  fill(random(0,255), random(0,255), random(0,255));
+  text("🌟", random(-100,600), random(-100,500))
+  
+ }
 
 };
 
@@ -16,14 +31,6 @@ draw = function(){
 mouseClicked = function(){
 
 }
-
-//🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
-};
-
 
 
 
